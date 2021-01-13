@@ -15,17 +15,15 @@ fs.readFile(fileName, 'utf8', (error, data) => {
   //============================================
   // Exercice 2
   //============================================
-   
+
 
   const exercice2 = (array) => {
     let count = 0;
-    let max = -1
-    for (let i = max + 1 ; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       for (let j = i + 1; j < array.length; j++) {
         if (array[j] > array[i]) {
-          max = j
-          i = max
-        } 
+          i = j
+        }
       }
       count++
     }

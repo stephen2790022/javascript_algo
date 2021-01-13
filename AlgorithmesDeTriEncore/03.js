@@ -15,17 +15,17 @@ fs.readFile(fileName, 'utf8', (error, data) => {
   //============================================
   // Exercice 3
   //============================================
-  function exo3(array, k) {
+  function exercice3(array, k) {
     if (array.length > 1) {
       for (i = 1; i < array.length; i++) {
         if (array[0] + array[i] === k) {
           return true;
         }
       }
-      exo3(array.splice(0, 1), k);
+      exercice3(array.splice(0, 1), k);
     } else {
       return false;
     }
   }
-  console.log(exo3(arr, 18))
+  console.log(exercice3(arr, 18))
 });

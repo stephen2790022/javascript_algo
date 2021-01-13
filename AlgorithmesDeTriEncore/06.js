@@ -20,7 +20,9 @@ fs.readFile(fileName, 'utf8', (error, data) => {
   const west = (numbers) => {
     let building = [];
     let ref = numbers.length - 1;
-    for (let i = numbers.length - 1; i > 0; i--){
+    for (let i = numbers.length - 2; i > 0; i--){
+      console.log(numbers[ref] + '************')
+      console.log(numbers[i] + 'pppppppppppppp')
       if(numbers[ref] < numbers[i]) {
         building.push(numbers[i]);
         ref = i;

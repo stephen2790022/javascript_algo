@@ -18,14 +18,13 @@ fs.readFile(fileName, 'utf8', (error, data) => {
   //============================================
 
   const exercice1 = (array, k) => {
-    const number = k;
     for (let i = 0; i < array.length; i++) {
-      let compare = array[i]
       for (let j = i + 1; j < array.length; j++) {
-        if (compare + array[j] === number) {
+        if (array[i] + array[j] === k) {
           return true;
         }
       }
+      return false;
     }
   }
   console.log(exercice1(arr, 18))
